@@ -1,5 +1,6 @@
 const correctPassword = "longpassword";
-const moan = new Audio('./moan.wav');
+const moan = new Audio('./assets/moan.wav');
+const naom = new Audio('./assets/naom.wav');
 let moanplayed = false;
 let stage = 0;
 
@@ -16,9 +17,10 @@ document
 	}
 });
 
-function arrowColor(){
+function arrowColor(element){
+	let id = element.id;
 	let arrow = document.getElementById("passwordArrow");
-	let password = document.getElementById("passwordBox").value;
+	let password = document.getElementById(id).value;
 	let hint = document.getElementById("hint");
 	let chars = document.getElementById("chars");
 
@@ -53,7 +55,10 @@ function arrowColor(){
 			moan.play();
 		}
 		moanplayed = true;
-		setTimeout(()=>{moanplayed = false}, 10000);
+		setTimeout(()=>{moanplayed = false;}, 10000);
+	}
+	if(password.includes("kcuf")){
+		naom.play();
 	}
 }
 
