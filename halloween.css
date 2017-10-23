@@ -29,3 +29,17 @@ input[type=password] {
 #p1 {
 	visibility: hidden;
 }
+
+.iconButton {
+	min-height: 96px;
+	width: 96px;
+	vertical-align: top;
+}
+
+.iconTitle {
+	color: black;
+	padding-top: 10px;
+	margin-top: 10px;
+	vertical-align: baseline;
+	overflow-wrap: break-word;
+}
